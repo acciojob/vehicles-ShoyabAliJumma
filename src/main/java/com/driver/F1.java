@@ -14,7 +14,7 @@ this.isManual=isManual;
     }
 
     public void accelerate(int rate){
-        int newSpeed = 0; //set the value of new speed by using currentSpeed and rate
+        int newSpeed = rate; //set the value of new speed by using currentSpeed and rate
         /**
          * speed 0: gear 1
          *
