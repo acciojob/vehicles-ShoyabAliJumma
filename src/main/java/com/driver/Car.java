@@ -16,26 +16,24 @@ public class Car extends Vehicle {
     {
         super(name);
         this.wheels=wheels;
-        this.currentGear=1;
+        this.doors=doors;
         this.gears=gears;
         this.isManual=isManual;
-        this.doors=doors;
+
         this.type=type;
         this.seats=seats;
+        currentGear=1;
 
-    }
 
-    public Car() {
     }
 
     public void changeGear(int newGear){
-
+currentGear=newGear;
         System.out.println("changeGear method called - The gear is changed to: " + currentGear);
     }
 
     public void changeSpeed(int newSpeed, int newDirection){
-this.setCurrentSpeed(newSpeed);
-this.setCurrentDirection(newDirection);
+        move(newSpeed,newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
 
